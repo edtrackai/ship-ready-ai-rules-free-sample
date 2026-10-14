@@ -13,7 +13,7 @@ This free sample contains:
 Copy `AGENTS.md` to your repo root and `.cursor/rules/30-stripe.mdc` into `.cursor/rules/`. Claude Code users can symlink or copy `AGENTS.md` to `CLAUDE.md`.
 
 ## The full pack
-**[Ship-Ready AI Rules ($15)](https://edtrackai.github.io/ai-rules?utm_source=cursor-directory&utm_medium=directory&utm_campaign=ai-rules-discovery-1014)** adds:
+**[Ship-Ready AI Rules v2 ($19)](https://edtrackai.github.io/ai-rules?utm_source=cursor-directory&utm_medium=directory&utm_campaign=ai-rules-discovery-1014)** adds:
 - 6 Cursor rules (project, Next.js 16, Supabase/RLS, Stripe, security, testing)
 - `CLAUDE.md` and 5 Claude Code skills (add a Supabase table, add a Stripe webhook event, add an auth flow, add a protected page, security review)
 - Setup docs, a rules-explained guide and a walkthrough
