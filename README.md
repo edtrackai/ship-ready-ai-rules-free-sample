@@ -35,5 +35,10 @@ More details: https://edtrackai.github.io/ai-rules?utm_source=cursor-directory&u
 
 Read more: [7 security bugs AI agents write in Next.js + Supabase + Stripe apps](https://dev.to/edtrackai/7-security-bugs-ai-agents-write-in-nextjs-supabase-stripe-apps-and-the-rules-that-stop-them-3o64)
 
+## Related free tools
+
+- [Next.js Supabase Stripe Security Checker](https://github.com/edtrackai/nextjs-supabase-stripe-security-checker): free CLI and GitHub Action, 24 static checks for keys, auth, RLS and Stripe webhooks.
+- [ship-ready-skills](https://github.com/edtrackai/ship-ready-skills): free Agent Skills that review Supabase RLS and grants, and Stripe webhook handlers (`npx skills add edtrackai/ship-ready-skills`).
+
 ## License
 MIT. See `LICENSE`.
