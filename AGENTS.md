@@ -19,8 +19,8 @@ Instructions for AI coding agents (Cursor, Claude Code, Codex, etc.) working in 
 ## Golden rules (never break these)
 1. **Two Supabase clients, never mixed.** `createUserClient()` (publishable key, RLS applies) for anything acting as a user. `createAdminClient()` (secret key, bypasses RLS) **only** in webhooks, cron jobs and trusted server jobs. Never import the admin client into a Server Component that renders user-controlled data, and never into client code.
 2. **Every new table gets RLS enabled in the same migration**, with explicit policies. No policy means no access. That's the correct default for server-only tables.
-3. **Auth check = `supabase.auth.getUser()`** on the server. Never trust `getSession()` or client-sent user ids for authorisation.
-4. **Stripe webhooks:** read the raw body with `request.text()`, verify with `stripe.webhooks.constructEvent`, record `event.id` as pending and mark it completed only after processing succeeds (reprocess pending retries, 5xx on failure), and return 2xx quickly. Never parse JSON before verifying.
+3. **Auth check = `supabase.auth.getUser()`** on the server. Never trust `getSession()` for authorisation. Take the acting user's id from `getUser()`; if a request names another user id (e.g. an admin action), check ownership or permission on the server before acting on it.
+4. **Stripe webhooks:** read the raw body with `request.text()`, verify with `stripe.webhooks.constructEvent`, record `event.id` as pending and mark it completed only after processing succeeds (reprocess pending retries only with idempotent upserts or an atomic lease claim, 5xx on failure), and return 2xx quickly. Never parse JSON before verifying.
 5. **Stripe is the source of truth for billing.** Grant access from the mirrored `subscriptions` row written by webhooks, never from the checkout success redirect.
 6. **Secrets live only on the server:** `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`. Only `NEXT_PUBLIC_*` may reach the browser. Files that touch secrets start with `import "server-only"`.
 7. **Validate env with Zod lazily** (`env()`), so `next build` works without secrets but runtime fails loudly.
