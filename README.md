@@ -16,6 +16,8 @@ Claude Code users: add `@AGENTS.md` to `CLAUDE.md` (or copy `AGENTS.md` to `CLAU
 | `.cursor/rules/30-stripe.mdc` | The complete Cursor rule for Stripe Checkout, Billing and webhooks: raw-body signature checks, `pending` → `completed` event tracking so a failed event is retried rather than lost, and multi-item-safe billing periods (Stripe API `2025-03-31.basil`+) |
 
 ## The full pack
+*Ad: paid products from the same author (Stack & Ship). Everything in this repo stays free.*
+
 **[Ship-Ready AI Rules v2](https://luxurydrive0.gumroad.com/l/ffjsf?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample)** adds:
 - **Guardrail hooks** for Claude Code that block `.env` reads, remote migrations, Stripe live mode and prod deploys, and fail closed if the guard breaks
 - **18 skills and 6 subagents** (RLS migrations and audit, server auth, Stripe Checkout, webhooks and subscriptions, tests, pre-merge audit)
@@ -25,8 +27,8 @@ Claude Code users: add `@AGENTS.md` to `CLAUDE.md` (or copy `AGENTS.md` to `CLAU
 More details: https://edtrackai.github.io/ai-rules?utm_source=cursor-directory&utm_medium=directory&utm_campaign=ai-rules-discovery-1014
 
 ## Before you launch
-- **Free CLI:** [nextjs-supabase-stripe-security-checker](https://github.com/edtrackai/nextjs-supabase-stripe-security-checker) runs 22 static checks locally in one command.
-- **[Launch Audit](https://luxurydrive0.gumroad.com/l/launch-audit?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** a pre-launch security audit with a ready / not-ready report and fix plan.
+- **Free CLI:** [nextjs-supabase-stripe-security-checker](https://github.com/edtrackai/nextjs-supabase-stripe-security-checker) runs 24 static checks locally in one command.
+- *Ad (paid, same author):* **[Launch Audit](https://luxurydrive0.gumroad.com/l/launch-audit?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** a pre-launch security audit with a ready / not-ready report and fix plan.
 - **[Ship It Bundle](https://luxurydrive0.gumroad.com/l/ship-it-bundle?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** AI Rules v2 + Launch Audit + Solo Founder OS Pro.
 - **[Paid MCP Starter](https://luxurydrive0.gumroad.com/l/paid-mcp-starter?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** charge for your MCP server with Next.js + Supabase + Stripe.
 - Free [security checklist](https://luxurydrive0.gumroad.com/l/security-checklist?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample).
