@@ -1,6 +1,6 @@
 # Ship-Ready AI Rules: free sample (Next.js + Supabase + Stripe)
 
-**Your AI agent will happily write `getSession()` on the server, a table without RLS, or a Stripe webhook that grants access twice, or never.** These rules stop that. Drop two files into your repo and Cursor, Claude Code and Codex follow them.
+**Your AI agent will happily write `getSession()` on the server, a table without RLS, or a Stripe webhook that grants access twice, or never.** These rules are written to steer it away from that. Drop two files into your repo and Cursor, Claude Code and Codex follow them.
 
 ## Quick start
 ```bash
@@ -15,11 +15,25 @@ Claude Code users: add `@AGENTS.md` to `CLAUDE.md` (or copy `AGENTS.md` to `CLAU
 | `AGENTS.md` | Stack notes and the 8 **golden rules**: two Supabase clients, RLS in every migration, `getUser()` not `getSession()`, verified Stripe webhooks with retry-safe idempotency, server-only secrets |
 | `.cursor/rules/30-stripe.mdc` | The complete Cursor rule for Stripe Checkout, Billing and webhooks: raw-body signature checks, `pending` → `completed` event tracking so a failed event is retried rather than lost, and multi-item-safe billing periods (Stripe API `2025-03-31.basil`+) |
 
-## The full pack
-*Ad: paid products from the same author (Stack & Ship). Everything in this repo stays free.*
+## Install as a Cursor plugin
+This repo is also a Cursor plugin (`.cursor-plugin/plugin.json`). It contains the one free rule, `.cursor/rules/30-stripe.mdc`. There are no hooks, agents, skills or MCP servers in it. The plugin is validated against Cursor's documented plugin format with Cursor's own validator script and schemas (from the `cursor/plugins` repository); it has not been tested in a live Cursor session.
 
-**[Ship-Ready AI Rules v2](https://luxurydrive0.gumroad.com/l/ffjsf?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample)** adds:
-- **Guardrail hooks** for Claude Code that block `.env` reads, remote migrations, Stripe live mode and prod deploys, and fail closed if the guard breaks
+**Local install**
+```bash
+git clone https://github.com/edtrackai/ship-ready-ai-rules-free-sample ~/.cursor/plugins/local/ship-ready-ai-rules-free-sample
+```
+Then restart Cursor or run **Developer: Reload Window**, and open **Customize** to check that the rule is listed. On Teams and Enterprise plans, an admin may need to turn on **Allow Local Plugin Imports**. The plugin doesn't include `AGENTS.md`; copy it into your repo root as in the quick start if you want the golden rules too.
+
+**Team marketplace (Teams and Enterprise plans)**
+An admin opens **Dashboard → Plugins & MCPs → Team Marketplaces → Add Marketplace → Import from Repo** and pastes `https://github.com/edtrackai/ship-ready-ai-rules-free-sample`. The repo's `.cursor-plugin/marketplace.json` lists the plugin.
+
+Don't use the plugin and a copied `.cursor/rules/30-stripe.mdc` in the same project, or the rule appears twice.
+
+## The full pack
+Ad (our own paid product): Ship-Ready AI Rules v2, $19 (plus VAT where applicable): https://luxurydrive0.gumroad.com/l/ffjsf?utm_source=github&utm_medium=readme&utm_campaign=cursor-plugin&utm_content=ship-ready-ai-rules-free-sample
+
+Everything in this repo stays free. AI Rules v2 adds:
+- **Guardrail hooks** for Claude Code designed to refuse `.env` reads, remote migrations, Stripe live mode and prod deploys, and to fail closed if the guard itself errors
 - **18 skills and 6 subagents** (RLS migrations and audit, server auth, Stripe Checkout, webhooks and subscriptions, tests, pre-merge audit)
 - All 6 Cursor rules, a Claude Code plugin, and one `AGENTS.md` synced to Codex, Gemini CLI, Copilot, Windsurf and Cline
 - A tested Next.js 16 + Supabase + Stripe reference app, the pre-launch security checklist and a prompt library
@@ -42,3 +56,5 @@ Read more: [7 security bugs AI agents write in Next.js + Supabase + Stripe apps]
 
 ## License
 MIT. See `LICENSE`.
+
+Cursor is a trademark of Anysphere, Inc. Claude and Claude Code are trademarks of Anthropic. Codex, Next.js, Supabase and Stripe are trademarks of their respective owners. This project is not affiliated with or endorsed by any of them.

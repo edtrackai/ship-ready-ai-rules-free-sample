@@ -1,0 +1,14 @@
+{
+  "name": "ship-ready-ai-rules-free-sample",
+  "displayName": "Ship-Ready AI Rules: free sample",
+  "version": "1.0.0",
+  "description": "Free Cursor rule for Stripe Checkout, Billing and webhooks in Next.js + Supabase apps (raw-body signature checks, retry-safe event tracking).",
+  "author": {
+    "name": "Stack & Ship"
+  },
+  "homepage": "https://github.com/edtrackai/ship-ready-ai-rules-free-sample",
+  "repository": "https://github.com/edtrackai/ship-ready-ai-rules-free-sample",
+  "license": "MIT",
+  "keywords": ["nextjs", "supabase", "stripe", "webhooks", "rules"],
+  "rules": "./.cursor/rules/"
+}

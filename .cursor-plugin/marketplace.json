@@ -1,0 +1,16 @@
+{
+  "name": "ship-ready-free",
+  "owner": {
+    "name": "Stack & Ship"
+  },
+  "metadata": {
+    "description": "Free Ship-Ready rules for Next.js + Supabase + Stripe, for Cursor team marketplace import."
+  },
+  "plugins": [
+    {
+      "name": "ship-ready-ai-rules-free-sample",
+      "source": ".",
+      "description": "Free Cursor rule for Stripe Checkout, Billing and webhooks"
+    }
+  ]
+}
