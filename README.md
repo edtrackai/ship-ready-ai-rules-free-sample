@@ -1,6 +1,6 @@
 # Ship-Ready AI Rules: free sample (Next.js + Supabase + Stripe)
 
-**Your AI agent will happily write `getSession()` on the server, a table without RLS, or a Stripe webhook that grants access twice, or never.** These rules are written to steer it away from that. Drop two files into your repo and Cursor, Claude Code and Codex follow them.
+**Your AI agent will happily write `getSession()` on the server, a table without RLS, or a Stripe webhook that grants access twice, or never.** These rules are written to steer it away from that. Drop two files into your repo for Cursor, Claude Code and Codex to read.
 
 ## Quick start
 ```bash
@@ -42,7 +42,10 @@ More details: https://edtrackai.github.io/ai-rules?utm_source=cursor-directory&u
 
 ## Before you launch
 - **Free CLI:** [nextjs-supabase-stripe-security-checker](https://github.com/edtrackai/nextjs-supabase-stripe-security-checker) runs 24 static checks locally in one command.
-- *Ad (paid, same author):* **[Launch Audit](https://luxurydrive0.gumroad.com/l/launch-audit?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** a pre-launch security audit with a ready / not-ready report and fix plan.
+
+Ad (our own paid products): Launch Audit, Ship It Bundle and Paid MCP Starter.
+
+- **[Launch Audit](https://luxurydrive0.gumroad.com/l/launch-audit?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** a pre-launch security audit with a ready / not-ready report and fix plan.
 - **[Ship It Bundle](https://luxurydrive0.gumroad.com/l/ship-it-bundle?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** AI Rules v2 + Launch Audit + Solo Founder OS Pro.
 - **[Paid MCP Starter](https://luxurydrive0.gumroad.com/l/paid-mcp-starter?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample):** charge for your MCP server with Next.js + Supabase + Stripe.
 - Free [security checklist](https://luxurydrive0.gumroad.com/l/security-checklist?utm_source=github&utm_medium=readme&utm_campaign=ship-ready-ai-rules-free-sample).
@@ -57,4 +60,4 @@ Read more: [7 security bugs AI agents write in Next.js + Supabase + Stripe apps]
 ## License
 MIT. See `LICENSE`.
 
-Cursor is a trademark of Anysphere, Inc. Claude and Claude Code are trademarks of Anthropic. Codex, Next.js, Supabase and Stripe are trademarks of their respective owners. This project is not affiliated with or endorsed by any of them.
+Cursor is a trademark of Anysphere, Inc. Claude and Claude Code are trademarks of Anthropic. Codex, Gemini, GitHub Copilot, Windsurf, Cline, Next.js, Supabase and Stripe are trademarks of their respective owners. This project is not affiliated with or endorsed by any of them.
